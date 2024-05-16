@@ -1,0 +1,28 @@
+@model List<LABA3.Models.Entities.StudentUser>
+
+<h1>StudentUsers</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Login</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var studentUser in Model)
+    {
+        <tr>
+            <td>@studentUser.Login</td>
+            <td>
+                <a class="btn btn-primary" asp-controller="StudentUsers" asp-action="Edit" asp-route-id="@studentUser.Id">Edit</a>
+            </td>
+            <td>
+                <a class="btn btn-primary" asp-controller="StudentUsers" asp-action="Details" asp-route-id="@studentUser.Id">Details</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+<div class="mt-3">
+    <a class="mt-3" asp-action="Create">Create New</a>
+</div>

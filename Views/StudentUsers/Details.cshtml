@@ -1,0 +1,24 @@
+@model LABA3.Models.Entities.StudentUser
+
+<h1>StudentUser</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Login</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.Login</td>
+        <td>@Model.Password</td>
+    </tr>
+    </tbody>
+</table>
+
+<div>
+    <a class="mt-3" asp-action="Index">Back to List</a>
+</div>
